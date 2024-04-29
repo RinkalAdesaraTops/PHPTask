@@ -1,0 +1,15 @@
+1)What Is Object Oriented Programming?
+-->Object-oriented programming (OOP) is a style of programming characterized by the identification of classes of objects closely linked with the methods (functions) with which they are associated.
+
+
+2)What Are Properties Of Object Oriented Systems
+-->Class & Objects
+-->Encapsulations
+-->Inheritance
+-->Polymorphism
+-->Abstraction
+-->Message Passing
+-->Constructor & Destructor
+
+3)What Is Difference Between Class And Interface?
+-->If a PHP class is a blueprint for objects, an interface is a blueprint for classes.
