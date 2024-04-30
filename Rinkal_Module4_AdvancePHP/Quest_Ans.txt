@@ -40,8 +40,130 @@ Example --
 -->Abstract Class contain data memebers & Constructor. Interface does not contain.
 
 7)Define Constructor and Destructor?
--->Constructor are blueprint for objects
--->
+-->Constructor are blueprint for objects creation providing values for member functions & variables.
+    ->Once object is initialized, the constructor is automatically called.
+-->Destructor are to delete or destroy objects & automatically called at the end of execution.
+Example :
+function __construct(){
+
+}
+function __destruct(){
+
+}
 
 
 8)How to Load Classes in PHP?
+-->To use spl_autoload_register()
+Example :
+spl_autoload_register(function ($class_name) {
+  include $class_name . '.php';
+});
+
+9)How to Call Parent Constructor?
+-->By using parent::__construct();
+Example:
+<?php
+class ParentClass{
+    function __construct(){
+        echo "Parent class calling";
+    }
+}
+class ChildClass extends ParentClass{
+    function __construct(){
+        parent::__construct();
+        echo "Child class calling";
+    }
+}
+$obj = new ParentClass();
+$obj1 = new ChildClass();
+
+?>
+
+10) • Are Parent Constructor Called Implicitly When Create An ObjectOf Class?
+-->No,Parent Constructor are not called Implicitly if the child class defines a constructor.
+-->To run a parent class constructor ,Must call parent::__construct().
+
+
+11)What Happen, If Constructor Is Defined As Private Or Protected?
+-->If a constructor is declared private, we can't create an object of the class, except within the class.
+-->We can't use externally.
+-->Only static method will be able to instantiate.
+
+
+12) What are PHP Magic Methods/Functions? List them.
+-->Magic methods are special methods which override PHP's default's action when certain actions are performed on an object.
+-->Starting with __ are reserved by PHP.
+--> __construct(), __destruct(), __call(), __callStatic(), __get(), __set(), __isset(), __unset(), __sleep(), __wakeup(), __serialize(), __unserialize(), __toString(), __invoke(), __set_state(), __clone(), and __debugInfo().
+
+13)Write program for Static
+Keyword in PHP?
+-->
+<?php
+class MyClass {
+  public static $str = "Rinkal Adesara";
+  
+  public static function hello() {
+    echo MyClass::$str;
+  }
+}
+
+echo MyClass::$str;
+echo "<br>";
+echo MyClass::hello();
+?>
+
+14)• Create multiple Traits and use it in to a single class?
+<?php
+trait myName{
+    public function dispMsg(){
+        echo "My Name is Rinkal";
+    }
+}
+trait mySurname{
+    public function dispSurname(){
+        echo "My Name is Adesara";
+    }
+}
+class MainClass{
+    use myName,mySurname;  
+}
+
+$obj = new MainClass();
+$obj->dispMsg();
+echo "<br>";
+$obj->dispSurname();
+
+?>
+
+15)Write PHP Script of Object Iteration?
+<?php
+class myclass{
+	private $var;
+	protected $var1;
+	public $x, $y, $z;
+    public function __construct(){
+        $this->var="private variable";
+		$this->var1=TRUE;
+		$this->x=100;
+		$this->y=200;
+		$this->z=300;
+    }
+	public function getData(){
+        foreach ($this as $key => $value) {
+           print "$key => $value\n";
+       }
+    }
+}
+$obj = new myclass();
+foreach($obj as $key => $value) {
+    print "$key => $value\n";
+}
+echo "\n";
+$obj->getData();
+?>
+
+16)Use of The $this keyword
+-->It is reserved keyword that refers to calling object.
+-->It is only applicable for internal methods.
+
+17)
