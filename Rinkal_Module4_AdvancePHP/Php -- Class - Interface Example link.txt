@@ -1,0 +1,2 @@
+Php -- Class - Interface Example link
+https://codeinphp.github.io/post/abstract-class-vs-interface/

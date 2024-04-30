@@ -13,3 +13,34 @@
 
 3)What Is Difference Between Class And Interface?
 -->If a PHP class is a blueprint for objects, an interface is a blueprint for classes.
+
+4)What Is Overloading?
+-->Create Properties and methods dynamically.
+Properties Of Overloading
+public __set(string $name, mixed $value): void
+public __get(string $name): mixed
+public __isset(string $name): bool
+public __unset(string $name): void
+
+5)What Is T_PAAMAYIM_NEKUDOTAYIM (Scope Resolution Operator (::) with
+Example.
+-->It is token that allows access to a constant,static property or methods of class or its parents.
+Example -- 
+<?php
+    class testClass{
+        const myname = "Rinkal";
+    }
+    $classname = 'testClass';
+    echo "My Name is ".$classname::myname;
+
+?>
+
+6)What Is Difference Between Abstract Class And Interface?
+-->Abstract Class does not support multiple inheritance, Interface support multiple inheritance.
+-->Abstract Class contain data memebers & Constructor. Interface does not contain.
+
+7)Define Constructor and Destructor?
+
+
+
+8)How to Load Classes in PHP?
