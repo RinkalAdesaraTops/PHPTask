@@ -41,6 +41,7 @@ Example --
 
 7)Define Constructor and Destructor?
 -->Constructor are blueprint for objects
+-->
 
 
 8)How to Load Classes in PHP?
